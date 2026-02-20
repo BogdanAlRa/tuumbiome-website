@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acne Care Phage Gel - TuumBiome</title>
+  <meta name="description" content="Acne Care Phage Gel cu bacteriofagi vii. 335 lei. Formula unica dezvoltata de cercetatori Cambridge impotriva acneei.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FBF8F3',
+            charcoal: '#2D2D2D',
+            terracotta: '#C76A4A',
+            sage: '#8B9E8B',
+            gold: '#C5A86B',
+            'cream-dark': '#F5F0E8',
+            'terracotta-dark': '#B55A3A',
+            'sage-light': '#A8B8A8',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['DM Sans', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background-color: #FBF8F3; color: #2D2D2D; overflow-x: hidden; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #FBF8F3; }
+    ::-webkit-scrollbar-thumb { background: #C5A86B; border-radius: 3px; }
+
+    /* Animations */
+    .fade-up { opacity: 0; transform: translateY(40px); transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .fade-in { opacity: 0; transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .fade-in.visible { opacity: 1; }
+    .slide-left { opacity: 0; transform: translateX(-60px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .slide-left.visible { opacity: 1; transform: translateX(0); }
+    .slide-right { opacity: 0; transform: translateX(60px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .slide-right.visible { opacity: 1; transform: translateX(0); }
+    .scale-in { opacity: 0; transform: scale(0.95); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .scale-in.visible { opacity: 1; transform: scale(1); }
+
+    /* Image hover zoom */
+    .img-zoom { overflow: hidden; }
+    .img-zoom img { transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .img-zoom:hover img { transform: scale(1.05); }
+
+    /* Navbar */
+    .nav-solid { background: rgba(251, 248, 243, 0.97); backdrop-filter: blur(12px); box-shadow: 0 1px 0 rgba(45, 45, 45, 0.06); }
+
+    /* Editorial divider */
+    .editorial-divider { width: 60px; height: 1px; background: #C5A86B; margin: 2rem auto; }
+    .editorial-divider-left { width: 60px; height: 1px; background: #C5A86B; margin: 2rem 0; }
+
+    /* Pull quote */
+    .pull-quote { position: relative; padding-left: 2rem; border-left: 2px solid #C5A86B; }
+
+    /* Product gallery thumbnails */
+    .gallery-thumb { border: 2px solid transparent; transition: border-color 0.3s, opacity 0.3s; cursor: pointer; opacity: 0.5; }
+    .gallery-thumb.active { border-color: #C76A4A; opacity: 1; }
+    .gallery-thumb:hover { opacity: 0.8; }
+
+    /* Subscription toggle */
+    .sub-toggle { position: relative; display: flex; background: #F5F0E8; border-radius: 2px; overflow: hidden; }
+    .sub-toggle-btn { flex: 1; padding: 12px 16px; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; text-align: center; cursor: pointer; transition: all 0.3s; position: relative; z-index: 1; color: #2D2D2D; border: none; background: none; }
+    .sub-toggle-btn.active { color: white; }
+    .sub-toggle-slider { position: absolute; top: 0; left: 0; width: 50%; height: 100%; background: #2D2D2D; transition: transform 0.3s ease; border-radius: 2px; }
+    .sub-toggle-slider.right { transform: translateX(100%); }
+
+    /* CTA Button */
+    .btn-editorial { display: inline-block; padding: 16px 48px; background: #C76A4A; color: white; font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; transition: all 0.3s ease; border: none; cursor: pointer; width: 100%; text-align: center; }
+    .btn-editorial:hover { background: #B55A3A; transform: translateY(-1px); }
+    .btn-outline { display: inline-block; padding: 14px 40px; background: transparent; color: #2D2D2D; font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 0.875rem; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; border: 1px solid #2D2D2D; transition: all 0.3s ease; cursor: pointer; }
+    .btn-outline:hover { background: #2D2D2D; color: #FBF8F3; }
+
+    /* FAQ Accordion */
+    .faq-item { border-bottom: 1px solid rgba(45, 45, 45, 0.08); }
+    .faq-question { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; cursor: pointer; transition: color 0.3s; }
+    .faq-question:hover { color: #C76A4A; }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), padding 0.4s; padding: 0 0; }
+    .faq-answer.open { max-height: 500px; padding: 0 0 24px; }
+    .faq-icon { transition: transform 0.3s; flex-shrink: 0; }
+    .faq-icon.open { transform: rotate(45deg); }
+
+    /* Timeline */
+    .timeline-line { position: absolute; left: 24px; top: 0; bottom: 0; width: 1px; background: linear-gradient(to bottom, #C5A86B, #C5A86B 70%, transparent); }
+    .timeline-dot { width: 12px; height: 12px; border-radius: 50%; border: 2px solid #C5A86B; background: #FBF8F3; position: relative; z-index: 2; flex-shrink: 0; }
+    .timeline-dot.active { background: #C76A4A; border-color: #C76A4A; }
+
+    /* Ingredient card */
+    .ingredient-card { transition: transform 0.4s ease, box-shadow 0.4s ease; }
+    .ingredient-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(45, 45, 45, 0.08); }
+
+    /* Mobile menu */
+    .mobile-menu { transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .mobile-menu.open { transform: translateX(0); }
+
+    /* Quote marks */
+    .quote-mark { font-family: 'Playfair Display', serif; font-size: 6rem; line-height: 1; color: #C5A86B; opacity: 0.3; }
+
+    /* Step circle */
+    .step-circle { width: 56px; height: 56px; border-radius: 50%; border: 1px solid #C5A86B; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step-circle span { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #C5A86B; }
+
+    /* Product image transition */
+    .product-main-img { transition: opacity 0.5s ease; }
+
+    /* Sticky product bar (mobile) */
+    .sticky-bar { transform: translateY(100%); transition: transform 0.4s ease; }
+    .sticky-bar.show { transform: translateY(0); }
+
+    /* Before/After grid */
+    .ba-grid-item { position: relative; overflow: hidden; }
+    .ba-grid-item .ba-label { position: absolute; bottom: 12px; left: 12px; background: white/90; backdrop-filter: blur(4px); padding: 4px 12px; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAVBAR (SOLID) ============ -->
+  <nav id="navbar" class="nav-solid fixed top-0 left-0 right-0 z-50" data-shopify-section="navbar">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="flex items-center justify-between h-20">
+        <!-- Left links (desktop) -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="index.html#stiinta" class="text-charcoal text-xs font-sans font-medium tracking-widest uppercase hover:text-terracotta transition-colors">Stiinta</a>
+          <a href="index.html#povestea" class="text-charcoal text-xs font-sans font-medium tracking-widest uppercase hover:text-terracotta transition-colors">Povestea</a>
+        </div>
+
+        <!-- Logo center -->
+        <a href="index.html" class="font-serif text-2xl lg:text-3xl font-semibold text-charcoal tracking-wide">TuumBiome</a>
+
+        <!-- Right links (desktop) -->
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="product.html" class="text-terracotta text-xs font-sans font-medium tracking-widest uppercase">Produs</a>
+          <a href="#" class="text-charcoal hover:text-terracotta transition-colors">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          </a>
+        </div>
+
+        <!-- Mobile hamburger -->
+        <button id="menuToggle" class="lg:hidden text-charcoal" aria-label="Meniu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="mobile-menu fixed top-0 right-0 w-80 h-full bg-cream z-50 shadow-2xl p-8">
+      <button id="menuClose" class="absolute top-6 right-6 text-charcoal" aria-label="Inchide">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="mt-16 flex flex-col gap-6">
+        <a href="index.html" class="font-serif text-2xl text-charcoal hover:text-terracotta transition-colors mobile-link">Acasa</a>
+        <a href="index.html#stiinta" class="font-serif text-2xl text-charcoal hover:text-terracotta transition-colors mobile-link">Stiinta</a>
+        <a href="index.html#povestea" class="font-serif text-2xl text-charcoal hover:text-terracotta transition-colors mobile-link">Povestea</a>
+        <a href="product.html" class="font-serif text-2xl text-terracotta mobile-link">Produs</a>
+        <a href="index.html#testimoniale" class="font-serif text-2xl text-charcoal hover:text-terracotta transition-colors mobile-link">Testimoniale</a>
+        <div class="editorial-divider-left mt-4"></div>
+        <button class="btn-editorial mt-4" onclick="document.getElementById('addToCart').click(); closeMenu();">Adauga in cos</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu overlay -->
+  <div id="menuOverlay" class="fixed inset-0 bg-black/40 z-40 hidden"></div>
+
+  <!-- ============ HERO PRODUCT SECTION ============ -->
+  <section data-shopify-section="product-hero" class="pt-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col lg:flex-row min-h-[calc(100vh-80px)]">
+        <!-- Left: Gallery (60%) -->
+        <div class="lg:w-[60%] bg-cream-dark p-6 lg:p-12 flex flex-col justify-center slide-left">
+          <!-- Main image -->
+          <div class="relative mb-6">
+            <img id="mainProductImg" src="../assets/products/serum-bottle-probiotic.jpg" alt="Acne Care Phage Gel" class="product-main-img w-full max-h-[65vh] object-contain mx-auto">
+          </div>
+          <!-- Thumbnails -->
+          <div class="flex justify-center gap-4">
+            <button class="gallery-thumb active w-16 h-16 lg:w-20 lg:h-20 rounded-sm overflow-hidden" onclick="changeImage(this, '../assets/products/serum-bottle-probiotic.jpg', 'Acne Care Phage Gel')">
+              <img src="../assets/products/serum-bottle-probiotic.jpg" alt="Produs - vedere fata" class="w-full h-full object-cover">
+            </button>
+            <button class="gallery-thumb w-16 h-16 lg:w-20 lg:h-20 rounded-sm overflow-hidden" onclick="changeImage(this, '../assets/products/product-set-flat-lay.jpg', 'Set produse TuumBiome')">
+              <img src="../assets/products/product-set-flat-lay.jpg" alt="Set produse" class="w-full h-full object-cover">
+            </button>
+            <button class="gallery-thumb w-16 h-16 lg:w-20 lg:h-20 rounded-sm overflow-hidden" onclick="changeImage(this, '../assets/brand/woman-applying-serum.jpg', 'Mod de aplicare')">
+              <img src="../assets/brand/woman-applying-serum.jpg" alt="Aplicare" class="w-full h-full object-cover">
+            </button>
+            <button class="gallery-thumb w-16 h-16 lg:w-20 lg:h-20 rounded-sm overflow-hidden" onclick="changeImage(this, '../assets/science/bacteria-mechanism.jpg', 'Mecanismul bacteriofagilor')">
+              <img src="../assets/science/bacteria-mechanism.jpg" alt="Stiinta" class="w-full h-full object-cover">
+            </button>
+          </div>
+        </div>
+
+        <!-- Right: Product info (40%) -->
+        <div class="lg:w-[40%] px-6 lg:px-12 xl:px-16 py-12 lg:py-16 flex flex-col justify-center slide-right">
+          <!-- Breadcrumb -->
+          <nav class="mb-8">
+            <ol class="flex items-center gap-2 font-sans text-xs text-charcoal/40">
+              <li><a href="index.html" class="hover:text-charcoal transition-colors">Acasa</a></li>
+              <li>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+              </li>
+              <li class="text-charcoal">Produs</li>
+            </ol>
+          </nav>
+
+          <p class="font-sans text-xs tracking-[0.3em] uppercase text-terracotta mb-4">Tratament cu bacteriofagi</p>
+          <h1 class="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal leading-tight mb-2">Acne Care<br>Phage Gel</h1>
+          <p class="font-sans text-sm text-charcoal/50 mb-8">30ml &bull; Gel cu bacteriofagi vii</p>
+
+          <!-- Price -->
+          <div class="mb-8">
+            <div class="flex items-baseline gap-3">
+              <span id="productPrice" class="font-serif text-3xl text-charcoal">335 lei</span>
+              <span id="subscriptionBadge" class="hidden font-sans text-xs bg-sage/20 text-sage px-3 py-1 rounded-full tracking-wider uppercase">Economisesti 15%</span>
+            </div>
+          </div>
+
+          <!-- Subscription toggle -->
+          <div class="mb-8">
+            <div class="sub-toggle" id="subToggle">
+              <div class="sub-toggle-slider" id="subSlider"></div>
+              <button class="sub-toggle-btn active" id="btnOneTime" onclick="setOneTime()">O singura data</button>
+              <button class="sub-toggle-btn" id="btnSubscription" onclick="setSubscription()">Abonament lunar</button>
+            </div>
+            <p id="subInfo" class="font-sans text-xs text-charcoal/40 mt-3 hidden">Livrare lunara automata. Anuleaza oricand.</p>
+          </div>
+
+          <!-- Add to cart -->
+          <button id="addToCart" class="btn-editorial mb-6" onclick="addToCart()">Adauga in cos</button>
+
+          <!-- Trust text -->
+          <div class="space-y-3 mb-8">
+            <div class="flex items-center gap-3 text-charcoal/50">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span class="font-sans text-xs tracking-wider">Testat dermatologic, zero efecte secundare</span>
+            </div>
+            <div class="flex items-center gap-3 text-charcoal/50">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              <span class="font-sans text-xs tracking-wider">Livrare in toata Romania</span>
+            </div>
+            <div class="flex items-center gap-3 text-charcoal/50">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span class="font-sans text-xs tracking-wider">Rezultate vizibile in 30 de zile</span>
+            </div>
+            <div class="flex items-center gap-3 text-charcoal/50">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <span class="font-sans text-xs tracking-wider">Dovedit stiintific</span>
+            </div>
+          </div>
+
+          <!-- Tagline -->
+          <div class="border-t border-charcoal/10 pt-6">
+            <p class="font-serif italic text-lg text-charcoal/60">&ldquo;Vizam cauza, nu simptomul&rdquo;</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDITORIAL DESCRIPTION ============ -->
+  <section data-shopify-section="editorial-description" class="py-24 lg:py-36">
+    <div class="max-w-3xl mx-auto px-6 fade-up">
+      <div class="text-center mb-16">
+        <p class="font-sans text-xs tracking-[0.3em] uppercase text-terracotta mb-4">Despre produs</p>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal leading-tight">Stiinta care<br>transforma pielea</h2>
+        <div class="editorial-divider mt-6"></div>
+      </div>
+
+      <div class="space-y-8 font-sans text-base text-charcoal/75 leading-[1.9]">
+        <p>
+          Acne Care Phage Gel este primul tratament anti-acnee din Romania bazat pe <strong>bacteriofagi vii</strong> &mdash; organisme naturale care au evoluat de miliarde de ani pentru a elimina cu precizie bacteriile daunatoare, protejand in acelasi timp ecosistemul delicat al pielii tale.
+        </p>
+
+        <div class="pull-quote my-12">
+          <blockquote class="font-serif text-xl md:text-2xl text-charcoal italic leading-relaxed">
+            Spre deosebire de tratamentele conventionale, bacteriofagii nu creeaza rezistenta si nu afecteaza microbiomul sanatos.
+          </blockquote>
+        </div>
+
+        <p>
+          Dezvoltat in laboratoarele noastre din Cluj-Napoca si Targu Mures, gelul nostru contine doua tipuri de bacteriofagi special selectati: cei care vizeaza <em>Cutibacterium acnes</em> si cei care elimina <em>Staphylococcus aureus</em>, cele doua cauze principale ale acneei inflamatorii.
+        </p>
+
+        <p>
+          Formula noastra a fost conceputa de <strong>Dr. Balint Kintses</strong>, microbiolog cu experienta la <strong>Cambridge</strong> si publicatii in <em>Cell</em> si <em>Nature</em>. Fiecare lot este produs sub cele mai stricte standarde de calitate, asigurand eficacitatea maxima a bacteriofagilor.
+        </p>
+
+        <div class="pull-quote my-12">
+          <blockquote class="font-serif text-xl md:text-2xl text-charcoal italic leading-relaxed">
+            Rezultatele apar din prima luna de utilizare &mdash; piele mai curata, inflamatie redusa, incredere restaurata.
+          </blockquote>
+        </div>
+
+        <p>
+          Gelul are o textura usoara, non-grasa, care se absoarbe rapid in piele. Este potrivit pentru toate tipurile de piele si poate fi integrat cu usurinta in rutina ta zilnica de ingrijire. Fara parfum, fara coloranti artificiali, fara parabeni.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INGREDIENTS STORY ============ -->
+  <section data-shopify-section="ingredients" class="py-24 lg:py-36 bg-cream-dark">
+    <div class="max-w-6xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16 fade-up">
+        <p class="font-sans text-xs tracking-[0.3em] uppercase text-terracotta mb-4">Ingrediente</p>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal">Fiecare ingredient<br>are un rol</h2>
+        <div class="editorial-divider mt-6"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 fade-up">
+        <!-- Ingredient 1 -->
+        <div class="ingredient-card bg-white p-8 rounded-sm">
+          <div class="w-10 h-10 rounded-full bg-terracotta/10 flex items-center justify-center mb-5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C76A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          </div>
+          <h3 class="font-serif text-lg text-charcoal mb-2">Bacteriofagi C. acnes</h3>
+          <p class="font-sans text-sm text-charcoal/60 leading-relaxed mb-3">Vizeaza si elimina bacteriile Cutibacterium acnes, cauza principala a acneei inflamatorii.</p>
+          <p class="font-sans text-xs text-terracotta tracking-wider uppercase">Ingredientul activ principal</p>
+        </div>
+
+        <!-- Ingredient 2 -->
+        <div class="ingredient-card bg-white p-8 rounded-sm">
+          <div class="w-10 h-10 rounded-full bg-terracotta/10 flex items-center justify-center mb-5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C76A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="font-serif text-lg text-charcoal mb-2">Bacteriofagi S. aureus</h3>
+          <p class="font-sans text-sm text-charcoal/60 leading-relaxed mb-3">Elimina Staphylococcus aureus, bacterie asociata cu infectii cutanate si inflamatie cronica.</p>
+          <p class="font-sans text-xs text-terracotta tracking-wider uppercase">Actiune dubla anti-bacteriana</p>
+        </div>
+
+        <!-- Ingredient 3 -->
+        <div class="ingredient-card bg-white p-8 rounded-sm">
+          <div class="w-10 h-10 rounded-full bg-sage/20 flex items-center justify-center mb-5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B9E8B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          </div>
+          <h3 class="font-serif text-lg text-charcoal mb-2">Apa purificata</h3>
+          <p class="font-sans text-sm text-charcoal/60 leading-relaxed mb-3">Baza purificata care asigura mediul ideal pentru mentinerea viabilitatii bacteriofagilor.</p>
+          <p class="font-sans text-xs text-sage tracking-wider uppercase">Baza formulei</p>
+        </div>
+
+        <!-- Ingredient 4 -->
+        <div class="ingredient-card bg-white p-8 rounded-sm">
+          <div class="w-10 h-10 rounded-full bg-sage/20 flex items-center justify-center mb-5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B9E8B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </div>
+          <h3 class="font-serif text-lg text-charcoal mb-2">Carbomer</h3>
+          <p class="font-sans text-sm text-charcoal/60 leading-relaxed mb-3">Agent de gelificare care asigura textura ideala si distributia uniforma a ingredientelor active pe piele.</p>
+          <p class="font-sans text-xs text-sage tracking-wider uppercase">Textura si consistenta</p>
+        </div>
+
+        <!-- Ingredient 5 -->
+        <div class="ingredient-card bg-white p-8 rounded-sm">
+          <div class="w-10 h-10 rounded-full bg-sage/20 flex items-center justify-center mb-5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8B9E8B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3 class="font-serif text-lg text-charcoal mb-2">Phenoxyethanol</h3>
+          <p class="font-sans text-sm text-charcoal/60 leading-relaxed mb-3">Conservant sigur si delicat care protejeaza formula fara a irita pielea sau a interfera cu bacteriofagii.</p>
+          <p class="font-sans text-xs text-sage tracking-wider uppercase">Conservare sigura</p>
+        </div>
+
+        <!-- Ingredient 6 -->
+        <div class="ingredient-card bg-white p-8 rounded-sm">
+          <div class="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center mb-5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C5A86B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+          </div>
+          <h3 class="font-serif text-lg text-charcoal mb-2">Minerale esentiale</h3>
+          <p class="font-sans text-sm text-charcoal/60 leading-relaxed mb-3">Tromethamine, Calcium Chloride si Sodium Chloride mentin pH-ul optim si stabilitatea formulei.</p>
+          <p class="font-sans text-xs text-gold tracking-wider uppercase">Echilibru si stabilitate</p>
+        </div>
+      </div>
+
+      <!-- Full ingredients list -->
+      <div class="mt-12 text-center fade-up">
+        <p class="font-sans text-xs text-charcoal/40 leading-relaxed max-w-2xl mx-auto">
+          <strong>Lista completa INCI:</strong> Water, Staphylococcus aureus bacteriophages, Cutibacterium acnes bacteriophages, Carbomer, Phenoxyethanol, Tromethamine, Calcium Chloride, Sodium Chloride
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW TO USE ============ -->
+  <section data-shopify-section="how-to-use" class="py-24 lg:py-36">
+    <div class="max-w-4xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16 fade-up">
+        <p class="font-sans text-xs tracking-[0.3em] uppercase text-terracotta mb-4">Ritual de ingrijire</p>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal">Cum se utilizeaza</h2>
+        <div class="editorial-divider mt-6"></div>
+      </div>
+
+      <div class="space-y-10 fade-up">
+        <!-- Step 1 -->
+        <div class="flex gap-6 lg:gap-10 items-start">
+          <div class="step-circle">
+            <span>1</span>
+          </div>
+          <div class="pt-2">
+            <h3 class="font-serif text-xl text-charcoal mb-2">Curata pielea</h3>
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed">Spala fata cu un gel de curatare bland si usuca-o usor cu un prosop curat. Pielea trebuie sa fie curata si uscata inainte de aplicare.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex gap-6 lg:gap-10 items-start">
+          <div class="step-circle">
+            <span>2</span>
+          </div>
+          <div class="pt-2">
+            <h3 class="font-serif text-xl text-charcoal mb-2">Aplica gelul</h3>
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed">Aplica o cantitate mica de gel pe zonele afectate de acnee. Distribuie uniform cu varfurile degetelor, cu miscari usoare si circulare.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex gap-6 lg:gap-10 items-start">
+          <div class="step-circle">
+            <span>3</span>
+          </div>
+          <div class="pt-2">
+            <h3 class="font-serif text-xl text-charcoal mb-2">Lasa sa actioneze</h3>
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed">Lasa gelul sa se absoarba complet in piele. Nu clati. Bacteriofagii au nevoie de contact direct cu bacteriile pentru a actiona eficient.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="flex gap-6 lg:gap-10 items-start">
+          <div class="step-circle">
+            <span>4</span>
+          </div>
+          <div class="pt-2">
+            <h3 class="font-serif text-xl text-charcoal mb-2">Hidrateaza (optional)</h3>
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed">Dupa absorbtie completa, poti aplica o crema hidratanta usoara deasupra, daca pielea ta necesita hidratare suplimentara.</p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="flex gap-6 lg:gap-10 items-start">
+          <div class="step-circle">
+            <span>5</span>
+          </div>
+          <div class="pt-2">
+            <h3 class="font-serif text-xl text-charcoal mb-2">Repeta zilnic</h3>
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed">Utilizeaza gelul de doua ori pe zi &mdash; dimineata si seara &mdash; timp de minimum 30 de zile pentru rezultate optime. Consistenta este cheia succesului.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE SCIENCE - FULL BLEED ============ -->
+  <section data-shopify-section="science-fullbleed" class="relative py-24 lg:py-36 bg-charcoal text-white overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-0">
+        <!-- Left: Text -->
+        <div class="px-6 lg:px-12 xl:px-20 py-12 lg:py-16 flex items-center fade-up">
+          <div>
+            <p class="font-sans text-xs tracking-[0.3em] uppercase text-gold mb-6">Stiinta din spatele gelului</p>
+            <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-tight mb-8">Mecanismul<br>bacteriofagilor</h2>
+            <div class="w-16 h-px bg-gold/40 mb-8"></div>
+            <p class="font-sans text-base text-white/70 leading-relaxed mb-6">
+              Bacteriofagii sunt cele mai specifice arme biologice din natura. Fiecare tip de bacteriofag recunoaste doar o singura tulpina de bacterie, la care se ataseaza prin receptorii de suprafata.
+            </p>
+            <p class="font-sans text-base text-white/70 leading-relaxed mb-6">
+              Odata atasat, bacteriofagul isi injecteaza materialul genetic in bacteria, preluand controlul mecanismelor celulare. Bacteria produce noi bacteriofagi, care sunt eliberati pentru a continua procesul.
+            </p>
+            <p class="font-sans text-base text-white/70 leading-relaxed mb-8">
+              Acest ciclu litic natural elimina bacteriile daunatoare fara antibiotice, fara chimicale agresive si fara efecte secundare. Microbiomul sanatos ramane intact si protejat.
+            </p>
+            <div class="flex flex-wrap gap-6">
+              <div>
+                <p class="font-serif text-3xl text-gold">2</p>
+                <p class="font-sans text-xs text-white/40 tracking-wider uppercase mt-1">Tipuri bacteriofagi</p>
+              </div>
+              <div>
+                <p class="font-serif text-3xl text-gold">0%</p>
+                <p class="font-sans text-xs text-white/40 tracking-wider uppercase mt-1">Rezistenta bacteriana</p>
+              </div>
+              <div>
+                <p class="font-serif text-3xl text-gold">100%</p>
+                <p class="font-sans text-xs text-white/40 tracking-wider uppercase mt-1">Specificitate</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Right: Image -->
+        <div class="img-zoom">
+          <img src="../assets/science/3-step-mechanism.jpg" alt="Mecanismul in 3 pasi al bacteriofagilor" class="w-full h-full min-h-[50vh] object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TIMELINE ============ -->
+  <section data-shopify-section="timeline" class="py-24 lg:py-36">
+    <div class="max-w-4xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16 fade-up">
+        <p class="font-sans text-xs tracking-[0.3em] uppercase text-terracotta mb-4">La ce sa te astepti</p>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal">Calatoria pielii tale</h2>
+        <div class="editorial-divider mt-6"></div>
+      </div>
+
+      <div class="relative pl-12 lg:pl-16 fade-up">
+        <div class="timeline-line"></div>
+
+        <!-- Week 1 -->
+        <div class="relative flex gap-6 mb-12">
+          <div class="timeline-dot mt-2" style="margin-left: -30px;"></div>
+          <div>
+            <p class="font-sans text-xs tracking-[0.2em] uppercase text-terracotta mb-2">Saptamana 1-2</p>
+            <h3 class="font-serif text-xl text-charcoal mb-2">Adaptare si actiune initiala</h3>
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed">Bacteriofagii incep sa actioneze imediat dupa aplicare. Pielea se adapteaza la noua formula. Este posibil sa observi o usoara reducere a roseatei in zonele afectate.</p>
+          </div>
+        </div>
+
+        <!-- Week 3-4 -->
+        <div class="relative flex gap-6 mb-12">
+          <div class="timeline-dot active mt-2" style="margin-left: -30px;"></div>
+          <div>
+            <p class="font-sans text-xs tracking-[0.2em] uppercase text-terracotta mb-2">Saptamana 3-4</p>
+            <h3 class="font-serif text-xl text-charcoal mb-2">Primele rezultate vizibile</h3>
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed">Inflamatia se reduce semnificativ. Leziunile acneice incep sa se vindece. Pielea pare mai curata si mai luminoasa. Majoritatea utilizatorilor observa imbunatatiri clare in aceasta perioada.</p>
+          </div>
+        </div>
+
+        <!-- Month 2 -->
+        <div class="relative flex gap-6 mb-12">
+          <div class="timeline-dot mt-2" style="margin-left: -30px;"></div>
+          <div>
+            <p class="font-sans text-xs tracking-[0.2em] uppercase text-terracotta mb-2">Luna 2</p>
+            <h3 class="font-serif text-xl text-charcoal mb-2">Consolidarea rezultatelor</h3>
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed">Microbiomul pielii se reechilibreaza. Eruptiile noi sunt mai rare si mai putin severe. Textura pielii se imbunatateste vizibil. Bariera naturala de protectie se restaureaza.</p>
+          </div>
+        </div>
+
+        <!-- Month 3+ -->
+        <div class="relative flex gap-6">
+          <div class="timeline-dot mt-2" style="margin-left: -30px;"></div>
+          <div>
+            <p class="font-sans text-xs tracking-[0.2em] uppercase text-terracotta mb-2">Luna 3+</p>
+            <h3 class="font-serif text-xl text-charcoal mb-2">Mentinere pe termen lung</h3>
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed">Pielea este vizibil mai curata si mai sanatoasa. Microbiomul echilibrat previne recidivele. Continuarea utilizarii mentine rezultatele si protejeaza impotriva eruptiilor viitoare.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BEFORE/AFTER GALLERY ============ -->
+  <section data-shopify-section="ba-gallery" class="py-24 lg:py-36 bg-cream-dark">
+    <div class="max-w-6xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16 fade-up">
+        <p class="font-sans text-xs tracking-[0.3em] uppercase text-terracotta mb-4">Rezultate reale</p>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal">Transformari vizibile</h2>
+        <div class="editorial-divider mt-6"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 fade-up">
+        <!-- BA 1 -->
+        <div class="relative group">
+          <div class="img-zoom rounded-sm overflow-hidden">
+            <img src="../assets/before-after/ba-acne-cheek.jpg" alt="Transformare acnee obraz" class="w-full aspect-[4/3] object-cover">
+          </div>
+          <div class="mt-4">
+            <p class="font-serif text-lg text-charcoal">Reducerea acneei pe obraz</p>
+            <p class="font-sans text-sm text-charcoal/50 mt-1">Rezultate dupa 30 de zile de utilizare zilnica</p>
+          </div>
+        </div>
+
+        <!-- BA 2 -->
+        <div class="relative group">
+          <div class="img-zoom rounded-sm overflow-hidden">
+            <img src="../assets/before-after/ba-acne-male.jpg" alt="Transformare acnee barbat" class="w-full aspect-[4/3] object-cover">
+          </div>
+          <div class="mt-4">
+            <p class="font-serif text-lg text-charcoal">Ameliorare acnee inflamatorie</p>
+            <p class="font-sans text-sm text-charcoal/50 mt-1">Rezultate dupa 45 de zile de utilizare consecventa</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-center font-sans text-xs text-charcoal/40 mt-10 italic">Rezultatele pot varia de la persoana la persoana. Imaginile nu au fost modificate digital.</p>
+    </div>
+  </section>
+
+  <!-- ============ EXPERT QUOTES ============ -->
+  <section data-shopify-section="expert-quotes" class="py-24 lg:py-36">
+    <div class="max-w-6xl mx-auto px-6 lg:px-12">
+      <!-- Quote 1 - Full width -->
+      <div class="grid lg:grid-cols-5 gap-12 items-center mb-24 fade-up">
+        <div class="lg:col-span-2 img-zoom rounded-sm overflow-hidden">
+          <img src="../assets/doctors/dermatologist-female.jpg" alt="Dr. Kadar" class="w-full aspect-[3/4] object-cover">
+        </div>
+        <div class="lg:col-span-3">
+          <div class="quote-mark">&ldquo;</div>
+          <blockquote class="font-serif text-2xl md:text-3xl text-charcoal leading-relaxed italic -mt-10 mb-8">
+            Tehnologia Phage vizeaza in mod unic acneea, protejand in acelasi timp echilibrul microbiomului. Este o abordare revolutionara in dermatologie.
+          </blockquote>
+          <div class="editorial-divider-left"></div>
+          <p class="font-sans font-semibold text-charcoal mt-4">Dr. Kadar</p>
+          <p class="font-sans text-sm text-charcoal/50">Dermatolog specialist</p>
+        </div>
+      </div>
+
+      <!-- Quote 2 - Full width reversed -->
+      <div class="grid lg:grid-cols-5 gap-12 items-center fade-up">
+        <div class="lg:col-span-3 order-2 lg:order-1">
+          <div class="quote-mark">&ldquo;</div>
+          <blockquote class="font-serif text-2xl md:text-3xl text-charcoal leading-relaxed italic -mt-10 mb-8">
+            Nu numai ca reduce inflamatia, dar si restabileste sistemul de aparare al pielii pe termen lung. Recomand acest produs cu incredere.
+          </blockquote>
+          <div class="editorial-divider-left"></div>
+          <p class="font-sans font-semibold text-charcoal mt-4">Bernadett Sari</p>
+          <p class="font-sans text-sm text-charcoal/50">Specialist in dermatologie</p>
+        </div>
+        <div class="lg:col-span-2 order-1 lg:order-2 img-zoom rounded-sm overflow-hidden">
+          <img src="../assets/doctors/dermatologist-male.jpg" alt="Bernadett Sari" class="w-full aspect-[3/4] object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS / TESTIMONIALS ============ -->
+  <section data-shopify-section="reviews" class="py-24 lg:py-36 bg-charcoal">
+    <div class="max-w-5xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16 fade-up">
+        <p class="font-sans text-xs tracking-[0.3em] uppercase text-gold mb-4">Testimoniale</p>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white">Ce spun clientii nostri</h2>
+        <div class="editorial-divider mt-6"></div>
+      </div>
+
+      <div class="space-y-16 fade-up">
+        <!-- Review 1 -->
+        <div class="text-center max-w-2xl mx-auto">
+          <div class="quote-mark text-center">&ldquo;</div>
+          <blockquote class="font-serif text-xl md:text-2xl text-white/90 leading-relaxed italic -mt-8 mb-6">
+            Gelul TuumBiome a fost surprinzator de bland, iar in cateva saptamani inflamatia s-a redus dramatic. Nu am mai folosit niciodata ceva atat de eficient si delicat in acelasi timp.
+          </blockquote>
+          <div class="w-12 h-px bg-gold/40 mx-auto mb-4"></div>
+          <p class="font-sans font-medium text-white">Estera</p>
+          <p class="font-sans text-xs text-white/40 mt-1">17 ani, Cluj-Napoca</p>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="text-center max-w-2xl mx-auto">
+          <div class="quote-mark text-center">&ldquo;</div>
+          <blockquote class="font-serif text-xl md:text-2xl text-white/90 leading-relaxed italic -mt-8 mb-6">
+            In sfarsit am gasit un produs care functioneaza pentru fiul meu adolescent! Dupa ani de produse ineficiente, TuumBiome a adus rezultate vizibile in prima luna.
+          </blockquote>
+          <div class="w-12 h-px bg-gold/40 mx-auto mb-4"></div>
+          <p class="font-sans font-medium text-white">Nicolette</p>
+          <p class="font-sans text-xs text-white/40 mt-1">Mama, Targu Mures</p>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="text-center max-w-2xl mx-auto">
+          <div class="quote-mark text-center">&ldquo;</div>
+          <blockquote class="font-serif text-xl md:text-2xl text-white/90 leading-relaxed italic -mt-8 mb-6">
+            In sfarsit, un produs care nu dauneaza bacteriilor bune de pe pielea mea! Ca student la biologie, apreciez abordarea stiintifica si rezultatele se vad clar.
+          </blockquote>
+          <div class="w-12 h-px bg-gold/40 mx-auto mb-4"></div>
+          <p class="font-sans font-medium text-white">Matia</p>
+          <p class="font-sans text-xs text-white/40 mt-1">21 ani, Bucuresti</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section data-shopify-section="faq" class="py-24 lg:py-36">
+    <div class="max-w-3xl mx-auto px-6 lg:px-12">
+      <div class="text-center mb-16 fade-up">
+        <p class="font-sans text-xs tracking-[0.3em] uppercase text-terracotta mb-4">Intrebari frecvente</p>
+        <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-charcoal">Raspunsuri utile</h2>
+        <div class="editorial-divider mt-6"></div>
+      </div>
+
+      <div class="fade-up">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3 class="font-serif text-lg text-charcoal pr-4">Ce sunt bacteriofagii si sunt siguri?</h3>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C76A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </div>
+          <div class="faq-answer">
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed">Bacteriofagii sunt organisme naturale care exista de miliarde de ani. Sunt virusuri care infecteaza exclusiv bacteriile, nu celulele umane. Sunt prezenti in apa, sol, alimente si chiar pe pielea noastra. Formula TuumBiome contine bacteriofagi special selectati si purificati, testati dermatologic si dovediti stiintific ca fiind siguri si eficienti.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3 class="font-serif text-lg text-charcoal pr-4">Cat timp dureaza pana vad rezultate?</h3>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C76A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </div>
+          <div class="faq-answer">
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed">Majoritatea utilizatorilor observa primele imbunatatiri in 2-4 saptamani de utilizare consecventa. Rezultate semnificative apar de obicei dupa 30 de zile. Pentru rezultate optime, recomandam utilizarea zilnica, de doua ori pe zi, timp de cel putin 8-12 saptamani.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3 class="font-serif text-lg text-charcoal pr-4">Pot folosi gelul impreuna cu alte produse?</h3>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C76A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </div>
+          <div class="faq-answer">
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed">Da, gelul poate fi integrat in rutina ta existenta de ingrijire. Recomandam sa il aplici pe pielea curata, inaintea altor produse. Evita utilizarea simultana cu produse care contin alcool sau ingrediente antibacteriene puternice, deoarece acestea pot afecta viabilitatea bacteriofagilor.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3 class="font-serif text-lg text-charcoal pr-4">Exista efecte secundare?</h3>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C76A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </div>
+          <div class="faq-answer">
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed">Nu, produsul nostru nu are efecte secundare cunoscute. Bacteriofagii sunt organisme naturale care actioneaza exclusiv asupra bacteriilor tinta, fara a afecta celulele pielii sau microbiomul sanatos. Gelul este testat dermatologic si potrivit pentru toate tipurile de piele, inclusiv piele sensibila.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3 class="font-serif text-lg text-charcoal pr-4">Cum trebuie depozitat produsul?</h3>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C76A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </div>
+          <div class="faq-answer">
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed">Gelul trebuie depozitat la frigider (2-8&deg;C) pentru a mentine viabilitatea bacteriofagilor. Evita expunerea la temperaturi ridicate sau la lumina directa a soarelui. Dupa deschidere, utilizati produsul in termen de 30 de zile pentru eficacitate maxima.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3 class="font-serif text-lg text-charcoal pr-4">Functioneaza pentru toate tipurile de acnee?</h3>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C76A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </div>
+          <div class="faq-answer">
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed">Gelul nostru este cel mai eficient pentru acneea inflamatorie cauzata de bacteriile Cutibacterium acnes si Staphylococcus aureus, care reprezinta majoritatea cazurilor de acnee. Pentru acneea hormonala sau cistica severa, recomandam consultarea unui dermatolog care poate integra gelul intr-un plan de tratament complet.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <h3 class="font-serif text-lg text-charcoal pr-4">Ce politica de retur aveti?</h3>
+            <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C76A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </div>
+          <div class="faq-answer">
+            <p class="font-sans text-sm text-charcoal/60 leading-relaxed">Oferim o politica de retur de 30 de zile de la data primirii produsului. Daca nu esti multumit de rezultate, te rugam sa ne contactezi si vom gasi impreuna cea mai buna solutie. Datorita naturii biologice a produsului, returul se poate face doar pentru produse nedeschise.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SHIPPING & STORAGE ============ -->
+  <section data-shopify-section="shipping" class="py-16 lg:py-20 bg-cream-dark">
+    <div class="max-w-4xl mx-auto px-6 lg:px-12">
+      <div class="grid md:grid-cols-3 gap-8 fade-up">
+        <!-- Shipping -->
+        <div class="text-center">
+          <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-white flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C76A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h3 class="font-serif text-lg text-charcoal mb-2">Livrare nationala</h3>
+          <p class="font-sans text-sm text-charcoal/60 leading-relaxed">Livram in toata Romania prin curier. Comanda ta ajunge in 2-4 zile lucratoare, ambalata cu grija.</p>
+        </div>
+
+        <!-- Storage -->
+        <div class="text-center">
+          <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-white flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C76A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+          </div>
+          <h3 class="font-serif text-lg text-charcoal mb-2">Depozitare la rece</h3>
+          <p class="font-sans text-sm text-charcoal/60 leading-relaxed">Pastreaza produsul la frigider (2-8&deg;C) pentru a mentine eficacitatea maxima a bacteriofagilor vii.</p>
+        </div>
+
+        <!-- Packaging -->
+        <div class="text-center">
+          <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-white flex items-center justify-center">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C76A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <h3 class="font-serif text-lg text-charcoal mb-2">Ambalaj izotermic</h3>
+          <p class="font-sans text-sm text-charcoal/60 leading-relaxed">Fiecare comanda este expediata in ambalaj izotermic special pentru a proteja bacteriofagii in timpul transportului.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BANNER ============ -->
+  <section data-shopify-section="cta-banner" class="py-24 lg:py-32 bg-charcoal relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <img src="../assets/brand/woman-applying-serum.jpg" alt="" class="w-full h-full object-cover" aria-hidden="true">
+    </div>
+    <div class="relative z-10 max-w-3xl mx-auto px-6 text-center fade-up">
+      <p class="font-sans text-xs tracking-[0.3em] uppercase text-gold mb-6">Incepe astazi</p>
+      <h2 class="font-serif text-3xl md:text-4xl lg:text-5xl text-white leading-tight mb-6">O noua era in ingrijirea<br>pielii tale incepe acum</h2>
+      <p class="font-sans text-base text-white/60 mb-10 max-w-lg mx-auto leading-relaxed">Descopera puterea bacteriofagilor. Formula unica dezvoltata de cercetatori Cambridge, acum disponibila in Romania.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button class="btn-editorial inline-block w-auto" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Comanda acum &mdash; 335 lei</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer data-shopify-section="footer" class="py-16 lg:py-20 bg-charcoal text-white border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-6 lg:px-12">
+      <div class="grid md:grid-cols-2 gap-12 lg:gap-24">
+        <!-- Left -->
+        <div>
+          <a href="index.html" class="font-serif text-3xl font-semibold text-white tracking-wide">TuumBiome</a>
+          <p class="font-sans text-sm text-white/50 leading-relaxed mt-6 max-w-sm">
+            Biotehnologie avansata pentru ingrijirea pielii. Bacteriofagi vii impotriva acneei, dezvoltati de cercetatori Cambridge.
+          </p>
+          <div class="editorial-divider-left mt-6" style="background: rgba(197, 168, 107, 0.3);"></div>
+          <p class="font-sans text-xs text-white/30 mt-4">Tuum Biome SRL</p>
+          <p class="font-sans text-xs text-white/30">Cluj-Napoca & Targu Mures, Romania</p>
+        </div>
+        <!-- Right -->
+        <div class="grid grid-cols-2 gap-8">
+          <div>
+            <h4 class="font-sans text-xs tracking-[0.2em] uppercase text-white/50 mb-6">Navigare</h4>
+            <ul class="space-y-3">
+              <li><a href="index.html" class="font-sans text-sm text-white/70 hover:text-white transition-colors">Acasa</a></li>
+              <li><a href="product.html" class="font-sans text-sm text-white/70 hover:text-white transition-colors">Produs</a></li>
+              <li><a href="index.html#stiinta" class="font-sans text-sm text-white/70 hover:text-white transition-colors">Stiinta</a></li>
+              <li><a href="index.html#povestea" class="font-sans text-sm text-white/70 hover:text-white transition-colors">Povestea</a></li>
+              <li><a href="index.html#jurnal" class="font-sans text-sm text-white/70 hover:text-white transition-colors">Jurnal</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-sans text-xs tracking-[0.2em] uppercase text-white/50 mb-6">Informatii</h4>
+            <ul class="space-y-3">
+              <li><a href="#" class="font-sans text-sm text-white/70 hover:text-white transition-colors">Livrare</a></li>
+              <li><a href="#" class="font-sans text-sm text-white/70 hover:text-white transition-colors">Politica de retur</a></li>
+              <li><a href="#" class="font-sans text-sm text-white/70 hover:text-white transition-colors">Termeni si conditii</a></li>
+              <li><a href="#" class="font-sans text-sm text-white/70 hover:text-white transition-colors">Confidentialitate</a></li>
+              <li><a href="#" class="font-sans text-sm text-white/70 hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="font-sans text-xs text-white/30">&copy; 2026 TuumBiome. Toate drepturile rezervate.</p>
+        <div class="flex gap-6">
+          <!-- Instagram -->
+          <a href="#" class="text-white/40 hover:text-white transition-colors" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <!-- Facebook -->
+          <a href="#" class="text-white/40 hover:text-white transition-colors" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <!-- Video -->
+          <a href="#" class="text-white/40 hover:text-white transition-colors" aria-label="TikTok">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ STICKY MOBILE BAR ============ -->
+  <div id="stickyBar" class="sticky-bar fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-charcoal/10 p-4 lg:hidden">
+    <div class="flex items-center justify-between gap-4">
+      <div>
+        <p class="font-serif text-lg text-charcoal">335 lei</p>
+        <p class="font-sans text-xs text-charcoal/50">Acne Care Phage Gel</p>
+      </div>
+      <button class="btn-editorial py-3 px-8 w-auto" onclick="addToCart()">Adauga in cos</button>
+    </div>
+  </div>
+
+  <!-- ============ JAVASCRIPT ============ -->
+  <script>
+    // IntersectionObserver for scroll animations
+    document.addEventListener('DOMContentLoaded', function() {
+      var observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -60px 0px'
+      };
+
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.fade-up, .fade-in, .slide-left, .slide-right, .scale-in').forEach(function(el) {
+        observer.observe(el);
+      });
+
+      // Sticky bar on mobile - show when hero product is out of view
+      var stickyBar = document.getElementById('stickyBar');
+      var addToCartBtn = document.getElementById('addToCart');
+      if (stickyBar && addToCartBtn) {
+        var stickyObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              stickyBar.classList.remove('show');
+            } else {
+              stickyBar.classList.add('show');
+            }
+          });
+        }, { threshold: 0 });
+        stickyObserver.observe(addToCartBtn);
+      }
+
+      // Mobile menu
+      var menuToggle = document.getElementById('menuToggle');
+      var menuClose = document.getElementById('menuClose');
+      var mobileMenu = document.getElementById('mobileMenu');
+      var menuOverlay = document.getElementById('menuOverlay');
+
+      function openMenu() {
+        mobileMenu.classList.add('open');
+        menuOverlay.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+      window.closeMenu = function() {
+        mobileMenu.classList.remove('open');
+        menuOverlay.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      menuToggle.addEventListener('click', openMenu);
+      menuClose.addEventListener('click', closeMenu);
+      menuOverlay.addEventListener('click', closeMenu);
+
+      document.querySelectorAll('.mobile-link').forEach(function(link) {
+        link.addEventListener('click', closeMenu);
+      });
+    });
+
+    // Product gallery
+    function changeImage(thumb, src, alt) {
+      var mainImg = document.getElementById('mainProductImg');
+      mainImg.style.opacity = '0';
+      setTimeout(function() {
+        mainImg.src = src;
+        mainImg.alt = alt;
+        mainImg.style.opacity = '1';
+      }, 300);
+      // Update thumbnails
+      document.querySelectorAll('.gallery-thumb').forEach(function(t) {
+        t.classList.remove('active');
+      });
+      thumb.classList.add('active');
+    }
+
+    // Subscription toggle
+    var isSubscription = false;
+    var oneTimePrice = 335;
+    var subscriptionPrice = 285;
+
+    function setOneTime() {
+      isSubscription = false;
+      document.getElementById('subSlider').classList.remove('right');
+      document.getElementById('btnOneTime').classList.add('active');
+      document.getElementById('btnSubscription').classList.remove('active');
+      document.getElementById('productPrice').textContent = oneTimePrice + ' lei';
+      document.getElementById('subscriptionBadge').classList.add('hidden');
+      document.getElementById('subInfo').classList.add('hidden');
+      // Update sticky bar
+      var stickyPrice = document.querySelector('#stickyBar .font-serif');
+      if (stickyPrice) stickyPrice.textContent = oneTimePrice + ' lei';
+    }
+
+    function setSubscription() {
+      isSubscription = true;
+      document.getElementById('subSlider').classList.add('right');
+      document.getElementById('btnSubscription').classList.add('active');
+      document.getElementById('btnOneTime').classList.remove('active');
+      document.getElementById('productPrice').textContent = subscriptionPrice + ' lei';
+      document.getElementById('subscriptionBadge').classList.remove('hidden');
+      document.getElementById('subInfo').classList.remove('hidden');
+      // Update sticky bar
+      var stickyPrice = document.querySelector('#stickyBar .font-serif');
+      if (stickyPrice) stickyPrice.textContent = subscriptionPrice + ' lei';
+    }
+
+    // Add to cart
+    function addToCart() {
+      var btn = document.getElementById('addToCart');
+      var originalText = btn.textContent;
+      btn.textContent = 'Adaugat!';
+      btn.style.background = '#8B9E8B';
+      setTimeout(function() {
+        btn.textContent = originalText;
+        btn.style.background = '#C76A4A';
+      }, 2000);
+    }
+
+    // FAQ Accordion
+    function toggleFaq(questionEl) {
+      var answer = questionEl.nextElementSibling;
+      var icon = questionEl.querySelector('.faq-icon');
+      var isOpen = answer.classList.contains('open');
+
+      // Close all
+      document.querySelectorAll('.faq-answer').forEach(function(a) {
+        a.classList.remove('open');
+      });
+      document.querySelectorAll('.faq-icon').forEach(function(i) {
+        i.classList.remove('open');
+      });
+
+      // Open clicked if was closed
+      if (!isOpen) {
+        answer.classList.add('open');
+        icon.classList.add('open');
+      }
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+      anchor.addEventListener('click', function(e) {
+        var targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        var target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          var navHeight = 80;
+          var targetPos = target.getBoundingClientRect().top + window.scrollY - navHeight;
+          window.scrollTo({ top: targetPos, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

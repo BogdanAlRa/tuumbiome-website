@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuumBiome — Ingrijire constienta a microbiomului</title>
+    <meta name="description" content="Primul gel antiacneic din Romania cu bacteriofagi vii. Vizam cauza, nu simptomul.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'soft-white': '#FAFAF8',
+                        'deep-forest': '#1B3A2D',
+                        'sage': '#7D9E8C',
+                        'warm-gold': '#B8946A',
+                        'soft-linen': '#F5F0EA',
+                        'muted-sage': '#A8BFB0',
+                        'light-sage': '#E8EFE9',
+                        'dark-forest': '#152E23',
+                    },
+                    fontFamily: {
+                        'serif': ['Cormorant Garamond', 'Georgia', 'serif'],
+                        'sans': ['Outfit', 'system-ui', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        'elegant': '0.15em',
+                        'wide-elegant': '0.25em',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Outfit', sans-serif; background-color: #FAFAF8; color: #1B3A2D; }
+
+        .font-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+        .font-sans { font-family: 'Outfit', sans-serif; }
+
+        /* Elegant thin scrollbar */
+        ::-webkit-scrollbar { width: 4px; }
+        ::-webkit-scrollbar-track { background: #FAFAF8; }
+        ::-webkit-scrollbar-thumb { background: #7D9E8C; border-radius: 2px; }
+
+        /* Reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.15s; }
+        .reveal-delay-2 { transition-delay: 0.3s; }
+        .reveal-delay-3 { transition-delay: 0.45s; }
+        .reveal-delay-4 { transition-delay: 0.6s; }
+
+        /* Subtle hover scale */
+        .hover-lift {
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.5s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(27, 58, 45, 0.06);
+        }
+
+        /* Elegant image hover */
+        .img-hover {
+            transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .img-hover:hover {
+            transform: scale(1.03);
+        }
+
+        /* Thin elegant borders */
+        .border-elegant { border-color: rgba(27, 58, 45, 0.1); }
+
+        /* Gold quotation marks */
+        .gold-quote::before {
+            content: '\201C';
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4rem;
+            line-height: 1;
+            color: #B8946A;
+            position: absolute;
+            top: -0.2em;
+            left: 0;
+        }
+
+        /* Navbar scroll effect */
+        .navbar-scrolled {
+            background: rgba(250, 250, 248, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(27, 58, 45, 0.08);
+        }
+
+        /* Elegant button styles */
+        .btn-forest {
+            background-color: #1B3A2D;
+            color: #FAFAF8;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .btn-forest:hover {
+            background-color: #152E23;
+            box-shadow: 0 4px 20px rgba(27, 58, 45, 0.2);
+        }
+
+        .btn-outline {
+            border: 1px solid #1B3A2D;
+            color: #1B3A2D;
+            background: transparent;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .btn-outline:hover {
+            background-color: #1B3A2D;
+            color: #FAFAF8;
+        }
+
+        /* Thin divider line animation */
+        .divider-line {
+            width: 0;
+            transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .divider-line.visible {
+            width: 60px;
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        /* Subscription toggle */
+        .toggle-active {
+            background-color: #1B3A2D;
+            color: #FAFAF8;
+        }
+        .toggle-inactive {
+            background-color: transparent;
+            color: #1B3A2D;
+        }
+
+        /* Stat number animation */
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Subtle pulse for CTA */
+        @keyframes subtlePulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(27, 58, 45, 0.1); }
+            50% { box-shadow: 0 0 0 8px rgba(27, 58, 45, 0); }
+        }
+
+        .pulse-subtle:hover {
+            animation: subtlePulse 2s infinite;
+        }
+
+        /* Link underline animation */
+        .link-underline {
+            position: relative;
+        }
+        .link-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #1B3A2D;
+            transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .link-underline:hover::after {
+            width: 100%;
+        }
+
+        /* Image elegant frame */
+        .elegant-frame {
+            position: relative;
+        }
+        .elegant-frame::after {
+            content: '';
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            right: -12px;
+            bottom: -12px;
+            border: 1px solid #7D9E8C;
+            border-radius: 4px;
+            z-index: -1;
+            transition: all 0.5s ease;
+        }
+        .elegant-frame:hover::after {
+            top: 8px;
+            left: 8px;
+            right: -8px;
+            bottom: -8px;
+        }
+
+        /* Journal card hover */
+        .journal-card {
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        .journal-card:hover {
+            transform: translateY(-6px);
+        }
+        .journal-card:hover .journal-img {
+            transform: scale(1.05);
+        }
+        .journal-img {
+            transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+    </style>
+</head>
+<body class="bg-soft-white text-deep-forest">
+
+    <!-- ========== NAVBAR ========== -->
+    <nav id="navbar" data-shopify-section="navbar" class="fixed top-0 left-0 right-0 z-50 bg-soft-white border-b border-transparent transition-all duration-500">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <!-- Mobile menu button -->
+                <button id="mobileMenuBtn" class="lg:hidden p-2 -ml-2" aria-label="Meniu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="6" x2="21" y2="6"/>
+                        <line x1="3" y1="12" x2="21" y2="12"/>
+                        <line x1="3" y1="18" x2="21" y2="18"/>
+                    </svg>
+                </button>
+
+                <!-- Desktop navigation left -->
+                <div class="hidden lg:flex items-center space-x-10">
+                    <a href="#stiinta" class="link-underline text-sm font-sans font-light tracking-elegant uppercase">Stiinta</a>
+                    <a href="#produs" class="link-underline text-sm font-sans font-light tracking-elegant uppercase">Produs</a>
+                </div>
+
+                <!-- Logo center -->
+                <a href="index.html" class="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none">
+                    <span class="font-serif text-2xl lg:text-3xl font-medium tracking-wide">TuumBiome</span>
+                </a>
+
+                <!-- Desktop navigation right -->
+                <div class="hidden lg:flex items-center space-x-10">
+                    <a href="#despre" class="link-underline text-sm font-sans font-light tracking-elegant uppercase">Despre Noi</a>
+                    <a href="#contact" class="link-underline text-sm font-sans font-light tracking-elegant uppercase">Contact</a>
+                </div>
+
+                <!-- Cart + CTA -->
+                <div class="flex items-center space-x-4 lg:space-x-6">
+                    <button aria-label="Cos de cumparaturi" class="relative p-2">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                            <line x1="3" y1="6" x2="21" y2="6"/>
+                            <path d="M16 10a4 4 0 01-8 0"/>
+                        </svg>
+                        <span class="absolute -top-0.5 -right-0.5 w-4 h-4 bg-warm-gold text-white text-[10px] rounded-full flex items-center justify-center font-sans">0</span>
+                    </button>
+                    <a href="product.html" class="hidden lg:inline-block btn-forest px-6 py-2.5 text-sm font-sans font-light tracking-elegant uppercase rounded-sm">Comanda</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-soft-white z-50 lg:hidden">
+            <div class="flex items-center justify-between px-6 h-16">
+                <span class="font-serif text-2xl font-medium">TuumBiome</span>
+                <button id="mobileMenuClose" class="p-2">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="flex flex-col items-center justify-center h-[calc(100vh-64px)] space-y-10">
+                <a href="#stiinta" class="mobile-link font-serif text-3xl font-light">Stiinta</a>
+                <a href="#produs" class="mobile-link font-serif text-3xl font-light">Produs</a>
+                <a href="#despre" class="mobile-link font-serif text-3xl font-light">Despre Noi</a>
+                <a href="#contact" class="mobile-link font-serif text-3xl font-light">Contact</a>
+                <div class="pt-6">
+                    <a href="product.html" class="btn-forest px-10 py-3.5 text-sm font-sans tracking-elegant uppercase rounded-sm inline-block">Comanda</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Spacer for fixed nav -->
+    <div class="h-16 lg:h-20"></div>
+
+    <!-- ========== HERO ========== -->
+    <section data-shopify-section="hero" class="bg-soft-linen">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row min-h-[85vh]">
+                <!-- Left content - 55% -->
+                <div class="lg:w-[55%] flex items-center px-8 md:px-16 lg:px-20 xl:px-28 py-20 lg:py-0">
+                    <div class="max-w-xl">
+                        <p class="reveal font-sans text-xs tracking-wide-elegant uppercase text-sage mb-8">Tuum Biome — Microbiome Skincare</p>
+                        <h1 class="reveal reveal-delay-1 font-serif text-5xl md:text-6xl lg:text-7xl font-light leading-[1.1] mb-8">
+                            Ingrijire<br>
+                            <em class="italic font-light">constienta</em><br>
+                            a microbiomului
+                        </h1>
+                        <div class="reveal reveal-delay-2 w-16 h-px bg-deep-forest opacity-20 mb-8"></div>
+                        <p class="reveal reveal-delay-2 font-sans text-base font-light leading-relaxed text-deep-forest/70 mb-10 max-w-md">
+                            Primul gel antiacneic din Romania cu bacteriofagi vii. Tehnologie de precizie care vizeaza cauza, nu simptomul.
+                        </p>
+                        <div class="reveal reveal-delay-3 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+                            <a href="product.html" class="btn-outline px-8 py-3.5 text-sm font-sans tracking-elegant uppercase rounded-sm inline-block">
+                                Descopera
+                            </a>
+                            <a href="#stiinta" class="link-underline font-sans text-sm font-light tracking-elegant uppercase text-deep-forest/60">
+                                Afla mai mult
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right image - 45% -->
+                <div class="lg:w-[45%] relative overflow-hidden min-h-[50vh] lg:min-h-0">
+                    <div class="absolute inset-0 p-6 lg:p-10">
+                        <div class="relative w-full h-full rounded-sm overflow-hidden">
+                            <img src="../assets/products/product-set-flat-lay.jpg" alt="TuumBiome set de produse" class="w-full h-full object-cover img-hover" loading="eager">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PHILOSOPHY QUOTE ========== -->
+    <section data-shopify-section="philosophy" class="bg-soft-white py-28 md:py-36 lg:py-44">
+        <div class="max-w-3xl mx-auto px-8 text-center">
+            <div class="reveal">
+                <div class="w-12 h-px bg-sage mx-auto mb-14"></div>
+                <blockquote class="font-serif text-2xl md:text-3xl lg:text-4xl font-light italic leading-relaxed mb-10">
+                    &ldquo;Scopul nu este distrugerea, ci restabilirea echilibrului.&rdquo;
+                </blockquote>
+                <div class="flex items-center justify-center space-x-3">
+                    <div class="w-8 h-px bg-warm-gold"></div>
+                    <p class="font-sans text-sm font-light tracking-elegant uppercase text-deep-forest/60">Dr. Krisztina Kelenyi, Co-fondator</p>
+                    <div class="w-8 h-px bg-warm-gold"></div>
+                </div>
+                <div class="w-12 h-px bg-sage mx-auto mt-14"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SCIENCE TWO-COLUMN ========== -->
+    <section id="stiinta" data-shopify-section="science" class="bg-soft-white py-20 md:py-28 lg:py-36">
+        <div class="max-w-7xl mx-auto px-8 lg:px-12">
+            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                <!-- Left text -->
+                <div class="lg:w-1/2 max-w-lg">
+                    <div class="reveal">
+                        <p class="font-sans text-xs tracking-wide-elegant uppercase text-sage mb-6">Fundamentul stiintific</p>
+                        <h2 class="font-serif text-4xl md:text-5xl font-light leading-tight mb-8">Stiinta pura</h2>
+                        <div class="w-10 h-px bg-warm-gold mb-8"></div>
+                    </div>
+                    <div class="reveal reveal-delay-1 space-y-6">
+                        <p class="font-sans text-base font-light leading-relaxed text-deep-forest/75">
+                            Bacteriofagii sunt organisme naturale, prezente pretutindeni in mediul inconjurator. Ei au o proprietate remarcabila: vizeaza cu precizie doar bacteriile daunatoare, lasand neatins restul microbiomului.
+                        </p>
+                        <p class="font-sans text-base font-light leading-relaxed text-deep-forest/75">
+                            Spre deosebire de antibiotice sau ingredientele agresive care distrug fara discriminare, bacteriofagii nostri actioneaza ca un sistem de precizie. Fiecare fag este selectat pentru a tinti exclusiv tulpinile de <em>Staphylococcus aureus</em> si <em>Cutibacterium acnes</em> responsabile de inflamatia acneica.
+                        </p>
+                        <p class="font-sans text-base font-light leading-relaxed text-deep-forest/75">
+                            Rezultatul: o piele curata care isi pastreaza bariera de aparare naturala intacta.
+                        </p>
+                    </div>
+                    <div class="reveal reveal-delay-2 mt-10">
+                        <a href="product.html" class="link-underline font-sans text-sm tracking-elegant uppercase inline-flex items-center gap-3">
+                            Citeste mai mult
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Right image -->
+                <div class="lg:w-1/2">
+                    <div class="reveal reveal-delay-1 elegant-frame relative z-10">
+                        <img src="../assets/science/bacteria-mechanism.jpg" alt="Mecanismul bacteriofagilor" class="w-full rounded-sm" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== NUMBERS ========== -->
+    <section data-shopify-section="numbers" class="bg-soft-linen py-24 md:py-32">
+        <div class="max-w-5xl mx-auto px-8">
+            <div class="reveal text-center mb-16">
+                <p class="font-sans text-xs tracking-wide-elegant uppercase text-sage">Rezultate clinice</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-8 text-center">
+                <div class="reveal">
+                    <p class="font-serif text-7xl md:text-8xl font-light text-sage mb-4" data-count="87">0%</p>
+                    <p class="font-sans text-sm font-light tracking-wide text-deep-forest/60 max-w-[200px] mx-auto">Reducerea vizibila a inflamatiei dupa 4 saptamani</p>
+                </div>
+                <div class="reveal reveal-delay-1">
+                    <p class="font-serif text-7xl md:text-8xl font-light text-sage mb-4" data-count="92">0%</p>
+                    <p class="font-sans text-sm font-light tracking-wide text-deep-forest/60 max-w-[200px] mx-auto">Dintre utilizatori au observat ameliorare vizibila</p>
+                </div>
+                <div class="reveal reveal-delay-2">
+                    <p class="font-serif text-7xl md:text-8xl font-light text-sage mb-4" data-count="96">0%</p>
+                    <p class="font-sans text-sm font-light tracking-wide text-deep-forest/60 max-w-[200px] mx-auto">Rata de satisfactie in randul pacientilor testati</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== INGREDIENT SHOWCASE ========== -->
+    <section data-shopify-section="ingredients" class="bg-soft-white py-24 md:py-36">
+        <div class="max-w-6xl mx-auto px-8 lg:px-12">
+            <div class="reveal text-center mb-20">
+                <p class="font-sans text-xs tracking-wide-elegant uppercase text-sage mb-6">Formula noastra</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-light">Ingrediente</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <!-- Ingredient 1 -->
+                <div class="reveal hover-lift border border-elegant rounded-sm p-8 text-center">
+                    <div class="w-12 h-12 mx-auto mb-6 flex items-center justify-center">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7D9E8C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <line x1="12" y1="2" x2="12" y2="6"/>
+                            <line x1="12" y1="18" x2="12" y2="22"/>
+                            <line x1="2" y1="12" x2="6" y2="12"/>
+                            <line x1="18" y1="12" x2="22" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-medium mb-3">Bacteriofagi S. aureus</h3>
+                    <p class="font-sans text-sm font-light leading-relaxed text-deep-forest/60">Vizeaza selectiv bacteriile Staphylococcus aureus asociate inflamatiei acneice</p>
+                </div>
+                <!-- Ingredient 2 -->
+                <div class="reveal reveal-delay-1 hover-lift border border-elegant rounded-sm p-8 text-center">
+                    <div class="w-12 h-12 mx-auto mb-6 flex items-center justify-center">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7D9E8C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 12s1.5-4 4-4 4 4 4 4-1.5 4-4 4-4-4-4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-medium mb-3">Bacteriofagi C. acnes</h3>
+                    <p class="font-sans text-sm font-light leading-relaxed text-deep-forest/60">Elimina precis Cutibacterium acnes fara a afecta flora benefica</p>
+                </div>
+                <!-- Ingredient 3 -->
+                <div class="reveal reveal-delay-2 hover-lift border border-elegant rounded-sm p-8 text-center">
+                    <div class="w-12 h-12 mx-auto mb-6 flex items-center justify-center">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7D9E8C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-medium mb-3">Carbomer</h3>
+                    <p class="font-sans text-sm font-light leading-relaxed text-deep-forest/60">Agent de gelificare care asigura textura ideala si eliberare controlata</p>
+                </div>
+                <!-- Ingredient 4 -->
+                <div class="reveal reveal-delay-3 hover-lift border border-elegant rounded-sm p-8 text-center">
+                    <div class="w-12 h-12 mx-auto mb-6 flex items-center justify-center">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7D9E8C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12s4.48 10 10 10z"/>
+                            <path d="M2 12h20"/>
+                            <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-xl font-medium mb-3">Electroliti naturali</h3>
+                    <p class="font-sans text-sm font-light leading-relaxed text-deep-forest/60">Clorura de calciu si clorura de sodiu pentru stabilitatea formulei</p>
+                </div>
+            </div>
+            <div class="reveal mt-12 text-center">
+                <p class="font-sans text-xs font-light tracking-wide text-deep-forest/40">
+                    Lista completa: Water, S. aureus bacteriophages, C. acnes bacteriophages, Carbomer, Phenoxyethanol, Tromethamine, Calcium Chloride, Sodium Chloride
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOUNDER STORY ========== -->
+    <section id="despre" data-shopify-section="founder" class="bg-soft-linen py-24 md:py-36">
+        <div class="max-w-6xl mx-auto px-8 lg:px-12">
+            <div class="flex flex-col lg:flex-row gap-16 lg:gap-24">
+                <!-- Left -->
+                <div class="lg:w-2/5">
+                    <div class="reveal">
+                        <p class="font-sans text-xs tracking-wide-elegant uppercase text-sage mb-6">Povestea noastra</p>
+                        <h2 class="font-serif text-4xl md:text-5xl font-light leading-tight mb-8">De la cercetare la ingrijire</h2>
+                        <div class="w-10 h-px bg-warm-gold mb-10"></div>
+                    </div>
+                    <div class="reveal reveal-delay-1">
+                        <div class="relative overflow-hidden rounded-sm mb-8">
+                            <img src="../assets/brand/woman-applying-serum.jpg" alt="Ingrijirea pielii cu TuumBiome" class="w-full img-hover" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <!-- Right -->
+                <div class="lg:w-3/5 flex flex-col justify-center">
+                    <div class="reveal reveal-delay-1 space-y-6">
+                        <p class="font-sans text-base font-light leading-relaxed text-deep-forest/75">
+                            Dr. Balint Kintses nu a pornit de la cosmetica. A pornit de la microbiologie, de la laboratoarele din Cambridge, de la publicatii in <em>Cell</em>, <em>Nature Microbiology</em> si <em>Nature Communications</em>. Fascinatia sa pentru bacteriofagi &mdash; aceste entitati naturale care au coexistat cu viata de miliarde de ani &mdash; l-a condus catre o intrebare simpla: daca fagii pot tinti bacterii specifice cu o precizie remarcabila, de ce nu ii folosim pentru a reechilibra microbiomul pielii?
+                        </p>
+                        <p class="font-sans text-base font-light leading-relaxed text-deep-forest/75">
+                            Impreuna cu Dr. Krisztina Kelenyi, au fondat Tuum Biome la Cluj-Napoca si Targu Mures, cu misiunea de a transforma cercetarea fundamentala in solutii reale. Fiecare lot de bacteriofagi este cultivat, purificat si testat in laboratoarele proprii &mdash; un proces care cere rabdare, precizie si o pasiune autentica pentru stiinta.
+                        </p>
+                    </div>
+                    <div class="reveal reveal-delay-2 mt-12 pl-8 border-l border-warm-gold">
+                        <blockquote class="font-serif text-xl md:text-2xl italic font-light leading-relaxed mb-4">
+                            &ldquo;Fiecare flacon contine miliarde de bacteriofagi &mdash; cel mai vechi si mai precis sistem de echilibrare biologica din natura.&rdquo;
+                        </blockquote>
+                        <p class="font-sans text-sm font-light tracking-elegant uppercase text-deep-forest/50">Dr. Balint Kintses, Fondator</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BEFORE / AFTER ========== -->
+    <section data-shopify-section="before-after" class="bg-soft-white py-24 md:py-36">
+        <div class="max-w-5xl mx-auto px-8 lg:px-12">
+            <div class="reveal text-center mb-20">
+                <p class="font-sans text-xs tracking-wide-elegant uppercase text-sage mb-6">Transformari reale</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-light">Rezultate vizibile</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+                <!-- Pair 1 -->
+                <div class="reveal">
+                    <div class="relative rounded-sm overflow-hidden border border-elegant">
+                        <img src="../assets/before-after/ba-acne-cheek.jpg" alt="Inainte si dupa tratament acnee" class="w-full" loading="lazy">
+                        <div class="absolute bottom-0 left-0 right-0 flex">
+                            <div class="w-1/2 py-3 text-center bg-deep-forest/60 backdrop-blur-sm">
+                                <span class="font-sans text-xs tracking-elegant uppercase text-white/90">Inainte</span>
+                            </div>
+                            <div class="w-1/2 py-3 text-center bg-sage/60 backdrop-blur-sm">
+                                <span class="font-sans text-xs tracking-elegant uppercase text-white/90">Dupa</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="font-sans text-xs font-light text-deep-forest/40 mt-4 text-center">Dupa 8 saptamani de utilizare zilnica</p>
+                </div>
+                <!-- Pair 2 -->
+                <div class="reveal reveal-delay-1">
+                    <div class="relative rounded-sm overflow-hidden border border-elegant">
+                        <img src="../assets/before-after/ba-acne-male.jpg" alt="Inainte si dupa tratament acnee barbat" class="w-full" loading="lazy">
+                        <div class="absolute bottom-0 left-0 right-0 flex">
+                            <div class="w-1/2 py-3 text-center bg-deep-forest/60 backdrop-blur-sm">
+                                <span class="font-sans text-xs tracking-elegant uppercase text-white/90">Inainte</span>
+                            </div>
+                            <div class="w-1/2 py-3 text-center bg-sage/60 backdrop-blur-sm">
+                                <span class="font-sans text-xs tracking-elegant uppercase text-white/90">Dupa</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="font-sans text-xs font-light text-deep-forest/40 mt-4 text-center">Dupa 6 saptamani de utilizare zilnica</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EXPERT ENDORSEMENTS ========== -->
+    <section data-shopify-section="experts" class="bg-soft-linen py-24 md:py-36">
+        <div class="max-w-6xl mx-auto px-8 lg:px-12">
+            <div class="reveal text-center mb-20">
+                <p class="font-sans text-xs tracking-wide-elegant uppercase text-sage mb-6">Recomandat de specialisti</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-light">Vocea expertilor</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16">
+                <!-- Expert 1 -->
+                <div class="reveal hover-lift bg-soft-white rounded-sm p-10 lg:p-12 border border-elegant">
+                    <div class="relative pl-8 mb-8">
+                        <span class="absolute top-0 left-0 font-serif text-5xl text-warm-gold leading-none">&ldquo;</span>
+                        <blockquote class="font-serif text-lg md:text-xl italic font-light leading-relaxed pt-4">
+                            Tehnologia Phage vizeaza in mod unic acneea, protejand echilibrul microbiomului.
+                        </blockquote>
+                    </div>
+                    <div class="flex items-center gap-4 pt-6 border-t border-elegant">
+                        <div class="w-14 h-14 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="../assets/doctors/dermatologist-female.jpg" alt="Dr. Kadar" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div>
+                            <p class="font-serif text-base font-medium">Dr. Kadar</p>
+                            <p class="font-sans text-xs font-light tracking-wide text-deep-forest/50">Dermatolog specialist</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Expert 2 -->
+                <div class="reveal reveal-delay-1 hover-lift bg-soft-white rounded-sm p-10 lg:p-12 border border-elegant">
+                    <div class="relative pl-8 mb-8">
+                        <span class="absolute top-0 left-0 font-serif text-5xl text-warm-gold leading-none">&ldquo;</span>
+                        <blockquote class="font-serif text-lg md:text-xl italic font-light leading-relaxed pt-4">
+                            Reduce inflamatia si restabileste sistemul de aparare al pielii pe termen lung.
+                        </blockquote>
+                    </div>
+                    <div class="flex items-center gap-4 pt-6 border-t border-elegant">
+                        <div class="w-14 h-14 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="../assets/doctors/dermatologist-male.jpg" alt="Bernadett Sari" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div>
+                            <p class="font-serif text-base font-medium">Bernadett Sari</p>
+                            <p class="font-sans text-xs font-light tracking-wide text-deep-forest/50">Specialist dermatologie</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PRODUCT SECTION ========== -->
+    <section id="produs" data-shopify-section="product" class="bg-soft-white py-24 md:py-36">
+        <div class="max-w-4xl mx-auto px-8 lg:px-12 text-center">
+            <div class="reveal mb-16">
+                <p class="font-sans text-xs tracking-wide-elegant uppercase text-sage mb-6">Produsul nostru</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-light">Acne Care Phage Gel</h2>
+            </div>
+            <div class="reveal reveal-delay-1 max-w-sm mx-auto mb-14">
+                <div class="relative overflow-hidden rounded-sm">
+                    <img src="../assets/products/serum-bottle-probiotic.jpg" alt="Acne Care Phage Gel - TuumBiome" class="w-full img-hover" loading="lazy">
+                </div>
+            </div>
+            <div class="reveal reveal-delay-2">
+                <p class="font-sans text-sm font-light text-deep-forest/60 mb-2">30ml &mdash; Gel cu bacteriofagi vii</p>
+                <div class="flex items-center justify-center gap-6 mb-8">
+                    <div class="text-center">
+                        <p class="font-serif text-3xl font-light">335 lei</p>
+                        <p class="font-sans text-xs font-light text-deep-forest/40">pret standard</p>
+                    </div>
+                    <div class="w-px h-10 bg-deep-forest/10"></div>
+                    <div class="text-center">
+                        <p class="font-serif text-3xl font-light text-sage">285 lei</p>
+                        <p class="font-sans text-xs font-light text-deep-forest/40">abonament lunar (-15%)</p>
+                    </div>
+                </div>
+
+                <!-- Subscription toggle -->
+                <div id="subscriptionToggle" class="inline-flex border border-elegant rounded-sm overflow-hidden mb-8">
+                    <button class="toggle-btn toggle-active px-6 py-2.5 text-sm font-sans tracking-wide transition-all duration-300" data-type="oneTime">
+                        O singura data
+                    </button>
+                    <button class="toggle-btn toggle-inactive px-6 py-2.5 text-sm font-sans tracking-wide transition-all duration-300" data-type="subscription">
+                        Abonament
+                    </button>
+                </div>
+
+                <div class="mb-8">
+                    <p id="selectedPrice" class="font-serif text-4xl font-light">335 lei</p>
+                </div>
+
+                <a href="product.html" class="btn-forest px-12 py-4 text-sm font-sans tracking-elegant uppercase rounded-sm inline-block pulse-subtle">
+                    Adauga in cos
+                </a>
+
+                <div class="flex items-center justify-center gap-8 mt-10">
+                    <div class="flex items-center gap-2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D9E8C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span class="font-sans text-xs font-light text-deep-forest/50">Testat dermatologic</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D9E8C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span class="font-sans text-xs font-light text-deep-forest/50">Fara parabeni</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7D9E8C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <span class="font-sans text-xs font-light text-deep-forest/50">Depozitare la frigider</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section data-shopify-section="testimonials" class="bg-soft-linen py-24 md:py-36">
+        <div class="max-w-6xl mx-auto px-8 lg:px-12">
+            <div class="reveal text-center mb-20">
+                <p class="font-sans text-xs tracking-wide-elegant uppercase text-sage mb-6">Experienta clientilor</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-light">Povesti reale</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                <!-- Testimonial 1 -->
+                <div class="reveal hover-lift bg-soft-white rounded-sm p-8 lg:p-10 border border-elegant">
+                    <div class="flex mb-3">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8946A" stroke="none" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8946A" stroke="none" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8946A" stroke="none" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8946A" stroke="none" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8946A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <blockquote class="font-serif text-lg italic font-light leading-relaxed mb-6">
+                        &ldquo;Gelul TuumBiome a fost surprinzator de bland, inflamatia s-a redus dramatic.&rdquo;
+                    </blockquote>
+                    <div class="pt-4 border-t border-elegant">
+                        <p class="font-serif text-base font-medium">Estera</p>
+                        <p class="font-sans text-xs font-light text-deep-forest/40">17 ani</p>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="reveal reveal-delay-1 hover-lift bg-soft-white rounded-sm p-8 lg:p-10 border border-elegant">
+                    <div class="flex mb-3">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8946A" stroke="none" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8946A" stroke="none" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8946A" stroke="none" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8946A" stroke="none" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8946A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <blockquote class="font-serif text-lg italic font-light leading-relaxed mb-6">
+                        &ldquo;In sfarsit am gasit un produs care functioneaza pentru fiul meu adolescent!&rdquo;
+                    </blockquote>
+                    <div class="pt-4 border-t border-elegant">
+                        <p class="font-serif text-base font-medium">Nicolette</p>
+                        <p class="font-sans text-xs font-light text-deep-forest/40">Mama unui adolescent</p>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="reveal reveal-delay-2 hover-lift bg-soft-white rounded-sm p-8 lg:p-10 border border-elegant">
+                    <div class="flex mb-3">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8946A" stroke="none" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8946A" stroke="none" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8946A" stroke="none" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8946A" stroke="none" class="mr-1"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="#B8946A" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <blockquote class="font-serif text-lg italic font-light leading-relaxed mb-6">
+                        &ldquo;Un produs care nu dauneaza bacteriilor bune de pe pielea mea!&rdquo;
+                    </blockquote>
+                    <div class="pt-4 border-t border-elegant">
+                        <p class="font-serif text-base font-medium">Matia</p>
+                        <p class="font-sans text-xs font-light text-deep-forest/40">21 ani</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== JOURNAL ========== -->
+    <section data-shopify-section="journal" class="bg-soft-white py-24 md:py-36">
+        <div class="max-w-6xl mx-auto px-8 lg:px-12">
+            <div class="reveal text-center mb-20">
+                <p class="font-sans text-xs tracking-wide-elegant uppercase text-sage mb-6">Cunostinte</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-light">Din jurnalul nostru</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                <!-- Article 1 -->
+                <article class="reveal journal-card cursor-pointer">
+                    <div class="overflow-hidden rounded-sm mb-6">
+                        <div class="aspect-[4/3] bg-soft-linen journal-img flex items-center justify-center">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#7D9E8C" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-40">
+                                <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/>
+                                <line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/>
+                                <line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="font-sans text-xs tracking-wide uppercase text-sage mb-3">Stiinta</p>
+                    <h3 class="font-serif text-xl font-medium leading-snug mb-3">Ce sunt bacteriofagii si de ce conteaza pentru pielea ta</h3>
+                    <p class="font-sans text-sm font-light text-deep-forest/50">O introducere in lumea fascinanta a organismelor care reechilibreaza natural microbiomul cutanat.</p>
+                </article>
+                <!-- Article 2 -->
+                <article class="reveal reveal-delay-1 journal-card cursor-pointer">
+                    <div class="overflow-hidden rounded-sm mb-6">
+                        <div class="aspect-[4/3] bg-soft-linen journal-img flex items-center justify-center">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#7D9E8C" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-40">
+                                <path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/>
+                                <path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                                <path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/>
+                                <path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="font-sans text-xs tracking-wide uppercase text-sage mb-3">Microbiom</p>
+                    <h3 class="font-serif text-xl font-medium leading-snug mb-3">Microbiomul pielii: ghidul complet pentru incepatori</h3>
+                    <p class="font-sans text-sm font-light text-deep-forest/50">Descopera ecosistemul invizibil care iti protejeaza pielea si cum sa il mentii sanatos.</p>
+                </article>
+                <!-- Article 3 -->
+                <article class="reveal reveal-delay-2 journal-card cursor-pointer">
+                    <div class="overflow-hidden rounded-sm mb-6">
+                        <div class="aspect-[4/3] bg-soft-linen journal-img flex items-center justify-center">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#7D9E8C" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="opacity-40">
+                                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="font-sans text-xs tracking-wide uppercase text-sage mb-3">Ingrijire</p>
+                    <h3 class="font-serif text-xl font-medium leading-snug mb-3">De ce tratamentele clasice pentru acnee pot face mai mult rau decat bine</h3>
+                    <p class="font-sans text-sm font-light text-deep-forest/50">Antibioticele si ingredientele agresive distrug fara discriminare. Exista o alternativa mai buna.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== NEWSLETTER ========== -->
+    <section id="contact" data-shopify-section="newsletter" class="bg-soft-linen py-24 md:py-32">
+        <div class="max-w-xl mx-auto px-8 text-center">
+            <div class="reveal">
+                <p class="font-sans text-xs tracking-wide-elegant uppercase text-sage mb-6">Ramai conectat</p>
+                <h2 class="font-serif text-3xl md:text-4xl font-light mb-4">Aboneaza-te</h2>
+                <p class="font-sans text-sm font-light text-deep-forest/60 mb-10">Primeste noutati despre stiinta microbiomului, sfaturi de ingrijire si oferte exclusive.</p>
+            </div>
+            <form class="reveal reveal-delay-1 flex flex-col sm:flex-row gap-4" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Multumim!'; this.querySelector('button').disabled=true;">
+                <input type="email" placeholder="Adresa ta de email" required class="flex-1 px-6 py-3.5 bg-transparent border border-elegant rounded-sm font-sans text-sm font-light placeholder-deep-forest/30 focus:outline-none focus:border-sage transition-colors">
+                <button type="submit" class="btn-forest px-8 py-3.5 text-sm font-sans tracking-elegant uppercase rounded-sm whitespace-nowrap">
+                    Aboneaza-te
+                </button>
+            </form>
+            <p class="reveal reveal-delay-2 font-sans text-xs font-light text-deep-forest/30 mt-6">Nicio solicitare de spam. Dezaboneaza-te oricand.</p>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer data-shopify-section="footer" class="bg-deep-forest text-soft-white py-20 md:py-24">
+        <div class="max-w-6xl mx-auto px-8 lg:px-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
+                <!-- Brand -->
+                <div class="lg:col-span-1">
+                    <a href="index.html" class="font-serif text-2xl font-medium tracking-wide">TuumBiome</a>
+                    <p class="font-sans text-sm font-light text-soft-white/50 mt-4 leading-relaxed">
+                        Ingrijire constienta a microbiomului. Dezvoltat in Romania, fundamentat in stiinta.
+                    </p>
+                </div>
+                <!-- Navigation -->
+                <div>
+                    <h4 class="font-serif text-lg font-medium mb-6">Navigare</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#stiinta" class="font-sans text-sm font-light text-soft-white/50 hover:text-soft-white transition-colors">Stiinta</a></li>
+                        <li><a href="product.html" class="font-sans text-sm font-light text-soft-white/50 hover:text-soft-white transition-colors">Produs</a></li>
+                        <li><a href="#despre" class="font-sans text-sm font-light text-soft-white/50 hover:text-soft-white transition-colors">Despre Noi</a></li>
+                        <li><a href="#contact" class="font-sans text-sm font-light text-soft-white/50 hover:text-soft-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <!-- Help -->
+                <div>
+                    <h4 class="font-serif text-lg font-medium mb-6">Asistenta</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="font-sans text-sm font-light text-soft-white/50 hover:text-soft-white transition-colors">Intrebari frecvente</a></li>
+                        <li><a href="#" class="font-sans text-sm font-light text-soft-white/50 hover:text-soft-white transition-colors">Transport si livrare</a></li>
+                        <li><a href="#" class="font-sans text-sm font-light text-soft-white/50 hover:text-soft-white transition-colors">Politica de retur</a></li>
+                        <li><a href="#" class="font-sans text-sm font-light text-soft-white/50 hover:text-soft-white transition-colors">Termeni si conditii</a></li>
+                    </ul>
+                </div>
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-serif text-lg font-medium mb-6">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="font-sans text-sm font-light text-soft-white/50">Tuum Biome SRL</li>
+                        <li class="font-sans text-sm font-light text-soft-white/50">Cluj-Napoca & Targu Mures</li>
+                        <li class="font-sans text-sm font-light text-soft-white/50">Romania</li>
+                        <li><a href="mailto:contact@tuumbiome.com" class="font-sans text-sm font-light text-soft-white/50 hover:text-soft-white transition-colors">contact@tuumbiome.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-10 border-t border-soft-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="font-sans text-xs font-light text-soft-white/30">&copy; 2026 Tuum Biome SRL. Toate drepturile rezervate.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="text-soft-white/30 hover:text-soft-white transition-colors" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-soft-white/30 hover:text-soft-white transition-colors" aria-label="Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-soft-white/30 hover:text-soft-white transition-colors" aria-label="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        // ===== IntersectionObserver for reveal animations =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        // Count animation for stat numbers
+                        const countEl = entry.target.querySelector('[data-count]');
+                        if (countEl) {
+                            animateCount(countEl);
+                        }
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+            document.querySelectorAll('.reveal, .divider-line').forEach(function(el) {
+                observer.observe(el);
+            });
+
+            // ===== Count animation =====
+            function animateCount(el) {
+                const target = parseInt(el.getAttribute('data-count'));
+                const duration = 2000;
+                const start = performance.now();
+                function update(currentTime) {
+                    const elapsed = currentTime - start;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    el.textContent = Math.round(target * eased) + '%';
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    }
+                }
+                requestAnimationFrame(update);
+            }
+
+            // ===== Navbar scroll effect =====
+            var navbar = document.getElementById('navbar');
+            var lastScroll = 0;
+            window.addEventListener('scroll', function() {
+                var currentScroll = window.pageYOffset;
+                if (currentScroll > 60) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+                lastScroll = currentScroll;
+            }, { passive: true });
+
+            // ===== Mobile menu =====
+            var mobileMenu = document.getElementById('mobileMenu');
+            var mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            var mobileMenuClose = document.getElementById('mobileMenuClose');
+
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            });
+
+            mobileMenuClose.addEventListener('click', function() {
+                mobileMenu.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+
+            document.querySelectorAll('.mobile-link').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('open');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // ===== Subscription toggle =====
+            var toggleBtns = document.querySelectorAll('.toggle-btn');
+            var selectedPrice = document.getElementById('selectedPrice');
+
+            toggleBtns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    toggleBtns.forEach(function(b) {
+                        b.classList.remove('toggle-active');
+                        b.classList.add('toggle-inactive');
+                    });
+                    this.classList.remove('toggle-inactive');
+                    this.classList.add('toggle-active');
+
+                    if (this.getAttribute('data-type') === 'subscription') {
+                        selectedPrice.textContent = '285 lei/luna';
+                        selectedPrice.classList.add('text-sage');
+                    } else {
+                        selectedPrice.textContent = '335 lei';
+                        selectedPrice.classList.remove('text-sage');
+                    }
+                });
+            });
+
+            // ===== Smooth scroll for anchor links =====
+            document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+                anchor.addEventListener('click', function(e) {
+                    var target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        var offset = 80;
+                        var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                        window.scrollTo({ top: top, behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
